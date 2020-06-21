@@ -1,0 +1,16 @@
+name: 'Build AVR Gcc Docker Action'
+branding:
+  icon: 'book-open'
+  color: 'black'
+description: 'AVRGcc Build action'
+inputs:
+  shellcommand: 
+    description: 'AVRGcc Build action'
+    required: true
+    default: 'echo "none command"'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.shellcommand }}
